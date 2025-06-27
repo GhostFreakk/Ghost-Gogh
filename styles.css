@@ -1,0 +1,232 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', monospace;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 0;
+}
+
+.title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5rem;
+    color: #00ffff;
+    text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    margin-bottom: 20px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #888;
+    font-weight: 400;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    }
+    to {
+        text-shadow: 0 0 30px #00ffff, 0 0 50px #00ffff, 0 0 60px #00ffff;
+    }
+}
+
+/* Gallery room styles */
+.gallery-room {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 60px 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+/* Artwork display styles */
+.artwork-display {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Gallery frame styles - simple clean frame */
+.gallery-frame {
+    margin-bottom: 40px;
+    display: inline-block;
+    position: relative;
+}
+
+.frame-border {
+    background: rgba(0, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 20px;
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    display: inline-block;
+}
+
+.frame-inner {
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+    border-radius: 15px;
+    padding: 0;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.frame-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.05), transparent);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Artwork container styles - perfectly adapts to pixel art */
+.artwork-container {
+    background: #000;
+    border-radius: 13px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.artwork-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.03) 50%, transparent 70%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Placeholder styles */
+.pixel-art-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 2px dashed rgba(0, 255, 255, 0.3);
+    border-radius: 13px;
+}
+
+.placeholder-text {
+    color: #666;
+    font-size: 1rem;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Artwork info styles */
+.artwork-info {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.artwork-info h3 {
+    color: #00ffff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.artwork-info p {
+    color: #888;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 30px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .gallery-room {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.4rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .gallery-room {
+        padding: 30px 15px;
+    }
+    
+    .artwork-info h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Special styling for CSS pixel art */
+.pixel-art {
+    display: inline-block;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    position: relative;
+    z-index: 3;
+}
+
+/* Grid pattern for pixel art background */
+.pixel-grid {
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 4px 4px;
+} 
