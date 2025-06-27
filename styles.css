@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +18,6 @@ body {
     padding: 20px;
 }
 
-/* Header styles */
 .header {
     text-align: center;
     margin-bottom: 60px;
@@ -50,7 +48,6 @@ body {
     }
 }
 
-/* Gallery room styles */
 .gallery-room {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 20px;
@@ -64,14 +61,12 @@ body {
     min-height: 70vh;
 }
 
-/* Artwork display styles */
 .artwork-display {
     text-align: center;
     max-width: 800px;
     width: 100%;
 }
 
-/* Gallery frame styles - simple clean frame */
 .gallery-frame {
     margin-bottom: 40px;
     display: inline-block;
@@ -108,7 +103,6 @@ body {
     z-index: 1;
 }
 
-/* Artwork container styles - perfectly adapts to pixel art */
 .artwork-container {
     background: #000;
     border-radius: 13px;
@@ -133,7 +127,6 @@ body {
     z-index: 2;
 }
 
-/* Placeholder styles */
 .pixel-art-placeholder {
     display: flex;
     justify-content: center;
@@ -151,7 +144,6 @@ body {
     font-style: italic;
 }
 
-/* Artwork info styles */
 .artwork-info {
     text-align: center;
     margin-top: 30px;
@@ -171,7 +163,6 @@ body {
     font-weight: 400;
 }
 
-/* Footer styles */
 .footer {
     text-align: center;
     margin-top: 60px;
@@ -180,7 +171,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .container {
         padding: 15px;
@@ -213,7 +203,6 @@ body {
     }
 }
 
-/* Special styling for CSS pixel art */
 .pixel-art {
     display: inline-block;
     image-rendering: pixelated;
@@ -223,7 +212,6 @@ body {
     z-index: 3;
 }
 
-/* Grid pattern for pixel art background */
 .pixel-grid {
     background-image: 
         linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
